@@ -12,6 +12,12 @@ const keys = require('../config/keys');
 router.get('/', (req, res) => {
   res.send("패스포트 모듈 테스트");
 });
+router.get('/register', (req, res) => {
+  res.render('user/register')
+});
+router.get('/login', (req, res) => {
+  res.render('user/login')
+});
 
 router.post('/register', (req, res) => {
   console.log(req.body);
